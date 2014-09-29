@@ -41,7 +41,7 @@ body {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
+    /* padding: 20px; */
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #EA098E;
@@ -128,20 +128,20 @@ body {
   background-color: #AF076A;
 }
 
-.topblock{
+.topblock, .middleblock, .bottomblock{
   color:#fff;
   /* margin: 0px; */
 }
 
 .user-info{
   /* margin-top: -30px; */
-  margin-left: 22%;
+  margin-left: 20%;
   margin-top: 6%;
 }
 
 .inner-level{
   /* margin-top: -30px; */
-  margin-left: 15%;
+  margin-left: 18%;
 }
 
 .important-1,.important-2{
@@ -150,13 +150,14 @@ body {
 }
 
 .section-icon{
-  width:32px;
-  height:32px;
-  /* background-color:gray; */
-  background: url("../img/home.png") no-repeat 0 0;
-  background-size: 100% 100%;
   float:left;
-  margin-top: 8%;
+  margin-top: 4%;
+  margin-left: 6%;
+}
+
+.fs1 {
+  color:rgba(255,255,255,0.7);
+	font-size: 2em;
 }
 
 #number{
