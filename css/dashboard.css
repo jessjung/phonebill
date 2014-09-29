@@ -106,13 +106,7 @@ body {
 }
 
 .container {
-  margin-top: 50px;
-}
-
-.callendar {
-  background-color: #EA098E;
-  color: #fff;
-  text-align: center;
+  margin-top: 1%;
 }
 
 .middleblock{
@@ -121,7 +115,7 @@ body {
 
 .buttonblock{
   /* background-color: #01B3E3; */
-  padding: 30px 45px;
+  padding: 10% 30%;
   text-align: center;
 }
 
@@ -160,6 +154,17 @@ body {
   margin-top: 6%;
 }
 
+.bill-info{
+  /* margin-top: -30px; */
+  margin-left: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.space{
+  height:10px;
+  width: 100%;
+}
+
 .inner-level{
   /* margin-top: -30px; */
   margin-left: 18%;
@@ -183,7 +188,7 @@ body {
 
 .fs2 {
   color:rgba(255,255,255,0.7);
-  font-size: 4em;
+  font-size: 3em;
 }
 
 #number {
@@ -221,28 +226,45 @@ body {
 }
 
 .summary-section{
-  margin-left:40px;
-  margin-right:40px;
+  margin-left:5%;
+  margin-right:5%;
 }
 
 .placeholder-sec{
   background: #E1E1E1;
   /* margin-right: 10px; */
-  height: 200px;
-  margin-top:20px;
+  height: 192px;
+  /* margin-top:20px; */
 }
 
-.callendar-tab{
+.calendar {
+  background-color: #EA098E;
+  color: #fff;
+  text-align: center;
+}
+
+.calendar-tab{
   /* vertical-align:text-top; */
-  height:70px;
+  height:40px;
   position: relative;
 }
 
-.month {
+.month{
+    color: rgba(255,255,255, 0.5);
     position: absolute;
     bottom: 0%;
     left: 20%;
     /* height: 30%; */
     /* width: 50%; */
     /* margin: -15% 0 0 -25%; */
+}
+
+.current{
+  color: rgba(255,255,255, 1);
+}
+
+.fs2{
+  position: absolute;
+  left: 20%;
+  bottom: -30%;
 }
