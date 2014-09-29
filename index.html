@@ -60,14 +60,14 @@
       <div class="row">
         <div class="col-sm-3 col-md-3 sidebar">
           <ul class="nav nav-sidebar topblock">
-            <!-- <li class="active"><li> -->
+            <li class="active"><li>
             <div class="section-icon fs1" aria-hidden="true" data-icon="&#xe076;"></div>
               <li class="nav user-info">
-                <h4 class="important-2">Jess Jung,</h4>
+                <h4 class="important-2">Hello, Jess Jung!</h4>
               </li>
               <li class="nav user-info">
                 <h4 class="important-2">your new bill for</h4>
-                <h2 class="important-1">October 2014</h2>
+                <h3 class="important-1">October 2014</h3>
                 <h4 class="important-2">is available now.</h4>
               </li>
               <br/>
@@ -80,28 +80,61 @@
             <li class="nav user-info"><h4 class="important-2">You should pay</h4></li>
             <li id="due" class="nav inner-level">
               <a href="">
-                Total amount
-                <h2 class="important-1">$74.20</h2>
+                Total amount <h3 class="important-1">$74.20</h3>
                 <br/>
                 Due by 11/04
-                  <h2 class="important-1">11days left</h2>
+                  <h3 class="important-1">11 days left</h3>
               </a>
             </li>
             <br/>
+            <li class="buttonblock">PAY NOW</li>
           </ul>
-          <!-- <ul class="nav nav-sidebar buttonblock">
-            <li><button><a href="">PAY NOW</a></button></li>
-          </ul> -->
           <ul class="nav nav-sidebar bottomblock">
-            <li><a href="">Total amount $74.20</a></li>
-            <li><a href="">Due by 11/04 11days left</a></li>
+            <div class="section-icon fs1" aria-hidden="true" data-icon="&#xe0f0;"></div>
+            <li class="nav user-info"><h4 class="important-2">You've used</h4></li>
+            <li id="voice" class="nav inner-level"><a href="">Voice <span id="voice-unit" class="unit"> minutes </span><span id="voice-value" class="value">245</span></a></li>
+            <li id="messaging" class="nav inner-level"><a href="">Messaging <span id="message-unit" class="unit">messages</span><span id="message-value" class="value">118</span></a></li>
+            <li id="data" class="nav inner-level"><a href="">Data <span id="data-unit" class="unit">GB</span><span id="data-value" class="value">2.94</span></a></li>
+            <br/>
           </ul>
+
         </div>
-        <div class="col-sm-9 col-md-9 navbar callendar main">Here is for time-navigation</div>
+        <div class="col-sm-9 col-md-9 navbar callendar main">
+          <div class="col-sm-1 col-md-1 callendar-tab"></div>
+          <div class="col-sm-2 col-md-2 callendar-tab">
+            <div class="current month">
+              <h4 class="important-1">Sep 2014</h4>
+              <h6 class="important-1">08/22/14 - 9/21/14</h6>
+            </div>
+          </div>
+          <div class="col-sm-1 col-md-1 callendar-tab">
+            <div class="fs2" aria-hidden="true" data-icon="&#x3c;"></div>
+          </div>
+          <div class="col-sm-3 col-md-3 callendar-tab">
+            <div class="current month">
+              <h3 class="important-1">Current</h3>
+              09/22/14 - 10/21/14
+            </div>
+          </div>
+          <div class="col-sm-1 col-md-1 callendar-tab">
+            <div class="fs2" aria-hidden="true" data-icon="&#x3d;"></div>
+          </div>
+          <div class="col-sm-2 col-md-2 callendar-tab"></div>
+        </div>
         <div class="col-sm-9 col-md-9 main" >
-      <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
+          <div class="summary-section">
+            <div class="row">
+              <h2 class="sub-header">Summary</h2>
+            </div>
+            <div class="row">
+              <div class="col-md-4 placeholder-sec">Phone info summary</div>
+              <div class="col-md-7  col-md-offset-1 placeholder-sec">Billing info summary</div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 placeholder-sec">Usage info summary</div>
+            </div>
+            <div class="table-responsive">
+            <!-- <table class="table table-striped">
               <thead>
                 <tr>
                   <th>#</th>
@@ -225,7 +258,8 @@
                   <td>libero</td>
                 </tr>
               </tbody>
-            </table>
+            </table> -->
+            </div>
           </div>
         </div>
       </div>
