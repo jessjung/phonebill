@@ -62,7 +62,7 @@ body {
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #707070;
+  color: #303030;
   background-color: #fff;
 }
 
@@ -166,29 +166,12 @@ body {
 }
 
 .inner-level{
-  /* margin-top: -30px; */
   margin-left: 18%;
 }
 
 .important-1, .important-2 {
   margin: 3px;
   font-weight:normal;
-}
-
-.section-icon {
-  float:left;
-  margin-top: 4%;
-  margin-left: 6%;
-}
-
-.fs1 {
-  color:rgba(255,255,255,0.7);
-	font-size: 2em;
-}
-
-.fs2 {
-  color:rgba(255,255,255,0.7);
-  font-size: 3em;
 }
 
 #number {
@@ -218,7 +201,7 @@ body {
 .value, .unit {
   float: right;
   /* margin-left: 3%; */
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 .value {
@@ -233,7 +216,7 @@ body {
 .placeholder-sec{
   background: #E1E1E1;
   /* margin-right: 10px; */
-  height: 192px;
+  height: 200px;
   /* margin-top:20px; */
 }
 
@@ -250,20 +233,45 @@ body {
 }
 
 .month{
-    color: rgba(255,255,255, 0.5);
+    color: #EA098E;
+    color: rgba(255,255,255,0.5);
     position: absolute;
-    bottom: 0%;
     left: 20%;
-    /* height: 30%; */
-    /* width: 50%; */
-    /* margin: -15% 0 0 -25%; */
 }
 
 .current{
+  color: #EA098E;
   color: rgba(255,255,255, 1);
+  bottom: -10%;
 }
 
-.fs2{
+.section-icon {
+  float:left;
+  margin-top: 4%;
+  margin-left: 6%;
+}
+.menu-icon{
+  float:right;
+  margin-right: 6%;
+}
+
+.fs1 {
+  color:#fff;
+  color:rgba(255,255,255,0.7);
+  font-size: 1em;
+}
+
+.fs2 {
+  color:#fff;
+  color:rgba(255,255,255,0.7);
+  font-size: 2em;
+}
+.fs3 {
+  color:#fff;
+  color:rgba(255,255,255,0.7);
+  font-size: 3em;
+}
+.fs3{
   position: absolute;
   left: 20%;
   bottom: -30%;
