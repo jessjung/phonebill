@@ -106,7 +106,7 @@ body {
 }
 
 .container {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .callendar {
@@ -126,4 +126,47 @@ body {
 
 .bottomblock{
   background-color: #AF076A;
+}
+
+.topblock{
+  color:#fff;
+  /* margin: 0px; */
+}
+
+.user-info{
+  /* margin-top: -30px; */
+  margin-left: 22%;
+  margin-top: 6%;
+}
+
+.inner-level{
+  /* margin-top: -30px; */
+  margin-left: 15%;
+}
+
+.important-1,.important-2{
+  margin: 3px;
+  font-weight:normal;
+}
+
+.section-icon{
+  width:32px;
+  height:32px;
+  /* background-color:gray; */
+  background: url("../img/home.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  float:left;
+  margin-top: 8%;
+}
+
+#number{
+  background:#EE40A7;
+}
+
+#plan{
+  background:#F15BB3;
+}
+
+#due{
+  background:#B6076E;
 }
