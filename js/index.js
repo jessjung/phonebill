@@ -3,6 +3,8 @@ var debug = true;
 var currentMonth = 10;
 var navCounter = 0;
 var datasize;
+var currentProperty;
+var selectedMenu;
 
 var userData = {
   "number": "(646) 717-2770",
@@ -105,10 +107,12 @@ var userData = {
 $(function() {
 
   datasize = userData.properties.length;
+  selectedMenu = "summary";
   // console.log(datasize);
   onchangeTimeNav(navCounter);
   onchangeDueNav(navCounter);
   initContentMain();
+  viewContentDetail(selectedMenu, navCounter);
 
   $('#previous').click(function() {
     navCounter++;
@@ -117,6 +121,7 @@ $(function() {
     }
     onchangeTimeNav(navCounter);
     onchangeDueNav(navCounter);
+    viewContentDetail(selectedMenu, navCounter);
 
   });
 
@@ -127,6 +132,7 @@ $(function() {
     }
     onchangeTimeNav(navCounter);
     onchangeDueNav(navCounter);
+    viewContentDetail(selectedMenu, navCounter);
 
   });
 
@@ -134,36 +140,45 @@ $(function() {
     // console.log("Menu clicked");
     clear();
     console.log($(this).attr("id"));
-    var selectedMenu = $(this).attr("id");
+    selectedMenu = $(this).attr("id");
 
-    viewContentDetail(selectedMenu);
     if (selectedMenu.indexOf("-bar") > 0) selectedMenu = selectedMenu.split(
       '-', 1)[0];
 
     var selectedElement = document.getElementById(selectedMenu);
     selectedElement.className += " active";
+    viewContentDetail(selectedMenu, navCounter);
 
   });
   $('.user-info').click(function() {
     clear();
     // console.log("go back to home!");
     navCounter = 0;
+    //console.log($(this).attr("id"));
+    // console.log(selectedMenu);
+    selectedMenu = $(this).attr("id");
+
     onchangeTimeNav(navCounter);
     onchangeDueNav(navCounter);
-    initContentMain();
+    // initContentMain();
+    viewContentDetail(selectedMenu, navCounter);
   })
 
 });
 
-function viewContentDetail(sort) {
-  $(".content").append("<div>");
+function viewContentDetail(sort, index) {
+  // $(".content").append("<div>");
+  var t = sort.toUpperCase() + "-DETAIL | " + currentProperty.monthInitial.toUpperCase() +
+    " 2014";
+  $(".sub-header").text(t);
+  $(".placeholder-sec").text("");
 
 }
 
 function initContentMain() {
   clear();
-  $(".content").append(
-    '<div class="summary-section"><h2 class="sub-header">Summary</h2><div class="col-md-4 placeholder-sec">Phone info summary</div><div class="col-md-7  col-md-offset-1 placeholder-sec">Billing info summary</div><div class="col-md-12 placeholder-sec" style="margin-top:20px;">Usage info summary</div></div></div>'
+  $(".content").html(
+    '<div class="summary-section"><h3 class="sub-header"></h3><div class="col-md-4 placeholder-sec">Phone info summary</div><div class="col-md-7  col-md-offset-1 placeholder-sec">Billing info summary</div><div class="col-md-12 placeholder-sec" style="margin-top:55px;">Usage info summary</div></div></div>'
   );
 
 }
@@ -171,8 +186,6 @@ function initContentMain() {
 function onchangeDueNav(index) {
 
   if (debug) console.log("--------Phonebill : onchangeDueNav---------");
-
-  var currentProperty;
 
   currentProperty = userData.properties[index];
   // console.log(currentProperty.dueData);
@@ -258,5 +271,6 @@ function clear() {
   if (debug) console.log("--------Phonebill : clear---------");
 
   $(".nav").removeClass("active");
-  $(".content").html("");
+  $(".sub-header").text("");
+  // $(".content").html("");
 }
