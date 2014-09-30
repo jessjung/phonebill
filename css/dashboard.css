@@ -71,6 +71,14 @@ body {
   background-color: #fff;
 }
 
+.chart-bg > .active > a,
+.chart-bg > .active > a:hover,
+.chart-bg > .active > a:focus {
+  color: #303030;
+  background-color: yellow;
+}
+
+
 
 /*
  * Main content
@@ -191,13 +199,14 @@ body {
   background:#B6076E;
 }
 
-#voice-bar, #data-bar {
-  background:#83054E;
+#voice-bar, #messaging-bar, #data-bar {
+  /* background:#83054E; */
+  background: rgba(0,0,0,0.2);
 }
-
+/* 
 #messaging-bar {
-  background:#6b0440;
-}
+  background: rgba(0,0,0,0.4);
+} */
 
 .value, .unit {
   float: right;
@@ -282,6 +291,13 @@ body {
 .chart{
   position: absolute;
   left:-6px;
+  z-index: 3000;
+}
+.chart-bg{
+  /* z-index: 2000; */
+}
+#voice-detail, #messaging-detail, #data-detail{
+  /* z-index: 3005; */
 }
 
 @keyframes fade {

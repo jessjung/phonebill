@@ -90,7 +90,7 @@ var userData = {
       "unit": "mins"
     }, {
       "type": "messaging",
-      "total": 98,
+      "total": 68,
       "limit": 100,
       "unit": "msgs"
     }, {
@@ -133,17 +133,16 @@ $(function() {
   $('.nav.inner-level').click(function() {
     // console.log("Menu clicked");
     clear();
-    $(this).addClass("active");
-    // console.log($(this).attr("id"));
+    console.log($(this).attr("id"));
     var selectedMenu = $(this).attr("id");
 
     viewContentDetail(selectedMenu);
+    if (selectedMenu.indexOf("-bar") > 0) selectedMenu = selectedMenu.split(
+      '-', 1)[0];
 
-    // if (selectedMenu === "due") viewDueDetail();
-    // else if (selectedMenu === "voice") viewVoiceDetail();
-    // else if (selectedMenu === "messaging") viewMessagingDetail();
-    // else
-    // viewDueDetail();
+    var selectedElement = document.getElementById(selectedMenu);
+    selectedElement.className += " active";
+
   });
 
 });
@@ -235,7 +234,7 @@ function visualizeUsages(usageData) {
       .range([0, width]);
     var value = Math.floor(x(d.total)) + "px";
 
-    bar.style("height", height).transition().duration(550).ease("linear").style(
+    bar.style("height", height).transition().duration(450).ease("linear").style(
       "width",
       value);
 
@@ -251,4 +250,5 @@ function clear() {
   if (debug) console.log("--------Phonebill : clear---------");
 
   $(".nav").removeClass("active");
+  $(".content").html("");
 }
