@@ -144,6 +144,14 @@ $(function() {
     selectedElement.className += " active";
 
   });
+  $('.user-info').click(function() {
+    clear();
+    // console.log("go back to home!");
+    navCounter = 0;
+    onchangeTimeNav(navCounter);
+    onchangeDueNav(navCounter);
+    initContentMain();
+  })
 
 });
 
