@@ -61,14 +61,14 @@ body {
 }
 
 .nav-sidebar > li > a:hover {
-  color: #303030;
+  /* color: #303030; */
 }
 
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #303030;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.4);
 }
 
 
@@ -166,7 +166,7 @@ body {
   margin-bottom: 1%;
 }
 .space{
-  height:10px;
+  height:15px;
   width: 100%;
 }
 
@@ -191,16 +191,12 @@ body {
   background:#B6076E;
 }
 
-#voice {
-  background:#9C065E;
-}
-
-#messaging {
+#voice, #data {
   background:#83054E;
 }
 
-#data {
-  background:#9C065E;
+#messaging {
+  background:#6b0440;
 }
 
 .value, .unit {
@@ -221,7 +217,7 @@ body {
 .placeholder-sec{
   background: #E1E1E1;
   /* margin-right: 10px; */
-  height: 200px;
+  height: 226px;
   /* margin-top:20px; */
 }
 
@@ -280,4 +276,8 @@ body {
   position: absolute;
   left: 20%;
   bottom: -30%;
+}
+.chart{
+  position: absolute;
+  left:-6px;
 }

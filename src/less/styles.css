@@ -3574,7 +3574,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .nav > li.disabled > a {
   color: #777777;
@@ -3589,7 +3589,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
   border-color: #ffffff;
 }
 .nav .nav-divider {
