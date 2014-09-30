@@ -85,9 +85,9 @@
             <li id="due" class="nav inner-level top">
               <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
               <a href="">
-                Total amount <h3 class="important-1">$74.20</h3>
-                Due by 11/04
-                  <h3 class="important-1">11 days left</h3>
+                Total amount <h3 class="important-1"><span id="due-amount">$74.20</span></h3>
+                Due by <span id="due-date">11/04</span>
+                  <h3 class="important-1"><span id="due-alert">11 days left</span></h3>
               </a>
             </li>
             <div class="space"></div>
@@ -115,25 +115,26 @@
           <div class="col-sm-1 col-md-1 calendar-tab"></div>
           <div class="col-sm-2 col-md-2 calendar-tab">
             <div class="month">
-              <h4 class="important-1">Sep 2014</h4>
-              <h6 class="important-1">08/22/14 - 9/21/14</h6>
+              <h4 class="important-1"><span id="previous-month">Sep 2014</span></h4>
+              <h6 class="important-1"><span id="previous-cycle">08/22/14 - 9/21/14</span></h6>
             </div>
           </div>
           <div class="col-sm-1 col-md-1 calendar-tab">
-            <div class="fs3" aria-hidden="true" data-icon="&#x3c;"></div>
+            <div id="previous" class="fs3 arrow-icon" aria-hidden="true" data-icon="&#x3c;"></div>
           </div>
           <div class="col-sm-3 col-md-3 calendar-tab">
             <div class="current month">
-              <h3 class="important-1">Current</h3>
-              09/22/14 - 10/21/14
+              <h3 class="important-1"><span id="current-month">Current</span></h3>
+              <span id="current-cycle">09/22/14 - 10/21/14</span>
             </div>
           </div>
           <div class="col-sm-1 col-md-1 calendar-tab">
-            <div class="fs3" aria-hidden="true" data-icon="&#x3d;"></div>
+            <div id="next" class="fs3 arrow-icon" aria-hidden="true" data-icon="&#x3d;"></div>
           </div>
           <div class="col-sm-2 col-md-2 calendar-tab">
             <div class="month">
-            <h4 class="important-1">Not Available</h4>
+            <h4 class="important-1"><span id="next-month">Not Available</h4>
+            <h6 class="important-1"><span id="next-cycle"></span></h6>
           </div>
           </div>
         </div>

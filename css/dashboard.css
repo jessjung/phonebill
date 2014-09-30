@@ -272,12 +272,26 @@ body {
   color:rgba(255,255,255,0.7);
   font-size: 3em;
 }
-.fs3{
+.arrow-icon{
   position: absolute;
   left: 20%;
   bottom: -30%;
+  -webkit-animation: fade 5s infinite 400ms;
+  animation: fade 5s infinite 400ms;
 }
 .chart{
   position: absolute;
   left:-6px;
+}
+
+@keyframes fade {
+  50%{
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes fade {
+  50% {
+    opacity: 0.5;
+  }
 }
