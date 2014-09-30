@@ -167,11 +167,10 @@ body {
   margin-top: 6%;
 }
 
-.bill-info{
+.billing-info{
   /* margin-top: -30px; */
   margin-left: 20%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-top: 6%;
 }
 .space{
   height:15px;
@@ -187,7 +186,7 @@ body {
   font-weight:normal;
 }
 
-#number {
+#phone {
   background:#EE40A7;
 }
 
@@ -195,7 +194,7 @@ body {
   background:#F15BB3;
 }
 
-#due {
+#billing {
   background:#B6076E;
 }
 
@@ -203,7 +202,7 @@ body {
   /* background:#83054E; */
   background: rgba(0,0,0,0.2);
 }
-/* 
+/*
 #messaging-bar {
   background: rgba(0,0,0,0.4);
 } */
