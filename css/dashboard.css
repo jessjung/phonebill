@@ -68,7 +68,7 @@ body {
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #303030;
-  background-color: rgba(255,255,255,0.4);
+  background-color: #fff;
 }
 
 
@@ -191,11 +191,11 @@ body {
   background:#B6076E;
 }
 
-#voice, #data {
+#voice-bar, #data-bar {
   background:#83054E;
 }
 
-#messaging {
+#messaging-bar {
   background:#6b0440;
 }
 

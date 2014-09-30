@@ -108,6 +108,7 @@ $(function() {
   // console.log(datasize);
   onchangeTimeNav(navCounter);
   onchangeDueNav(navCounter);
+  initContentMain();
 
   $('#previous').click(function() {
     navCounter++;
@@ -128,11 +129,37 @@ $(function() {
     onchangeDueNav(navCounter);
 
   });
-  $('#due').click(function() {
-    console.log("due menu clicked");
-  })
+
+  $('.nav.inner-level').click(function() {
+    // console.log("Menu clicked");
+    clear();
+    $(this).addClass("active");
+    // console.log($(this).attr("id"));
+    var selectedMenu = $(this).attr("id");
+
+    viewContentDetail(selectedMenu);
+
+    // if (selectedMenu === "due") viewDueDetail();
+    // else if (selectedMenu === "voice") viewVoiceDetail();
+    // else if (selectedMenu === "messaging") viewMessagingDetail();
+    // else
+    // viewDueDetail();
+  });
 
 });
+
+function viewContentDetail(sort) {
+  $(".content").append("<div>");
+
+}
+
+function initContentMain() {
+  clear();
+  $(".content").append(
+    '<div class="summary-section"><h2 class="sub-header">Summary</h2><div class="col-md-4 placeholder-sec">Phone info summary</div><div class="col-md-7  col-md-offset-1 placeholder-sec">Billing info summary</div><div class="col-md-12 placeholder-sec" style="margin-top:20px;">Usage info summary</div></div></div>'
+  );
+
+}
 
 function onchangeDueNav(index) {
 
@@ -201,7 +228,7 @@ function visualizeUsages(usageData) {
   height = height + "px";
 
   usageData.forEach(function(d) {
-    var sectionName = "#" + d.type;
+    var sectionName = "#" + d.type + "-bar";
     var bar = d3.select(sectionName);
     var x = d3.scale.linear()
       .domain([0, d.limit])
@@ -216,6 +243,12 @@ function visualizeUsages(usageData) {
     _html = d.type + '<span class="unit"> ' + d.unit +
       ' </span><span class="value">' + d.total + '/' + d.limit +
       '</span>';
-    $(detailsectionName).html(_html);
+    d3.select(detailsectionName).html(_html);
   });
+}
+
+function clear() {
+  if (debug) console.log("--------Phonebill : clear---------");
+
+  $(".nav").removeClass("active");
 }

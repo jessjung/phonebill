@@ -57,10 +57,11 @@
     </nav>
     <div class="container">
       <div class="row">
+        <!--nav-sidebar elements
+        ================================================== -->
         <div class="col-sm-3 col-md-3 sidebar">
           <ul class="nav nav-sidebar topblock">
-            <li class="active"><li>
-            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe076;"></div>
+            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe010;"></div>
               <li class="nav user-info">
                 <h4 class="important-2">Hello, Jess Jung!</h4>
                 <div class="space"></div>
@@ -71,52 +72,54 @@
               <div class="space"></div>
               <li id="number" class="nav inner-level">
                 <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-                  <a href="">(646) 717-2770</a>
+                  <a>(646) 717-2770</a>
               </li>
               <li id="plan" class="nav inner-level">
                 <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-                <a href="">Simple choice plan</a>
+                <a>Simple choice plan</a>
               </li>
               <div class="space"></div>
           </ul>
           <ul class="nav nav-sidebar middleblock">
-            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe0f3;"></div>
+            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe0ed;"></div>
             <li class="nav user-info"><!-- <h4 class="important-2"> -->You should pay<!-- </h4> --></li>
             <li id="due" class="nav inner-level top">
               <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-              <a href="">
-                Total amount <h3 class="important-1"><span id="due-amount">$74.20</span></h3>
-                Due by <span id="due-date">11/04</span>
-                  <h3 class="important-1"><span id="due-alert">11 days left</span></h3>
+              <a>
+                Total amount <h3 class="important-1"><span id="due-amount"></span></h3>
+                Due by <span id="due-date"></span>
+                  <h3 class="important-1"><span id="due-alert"></span></h3>
               </a>
             </li>
             <div class="space"></div>
             <li class="buttonblock">PAY NOW</li>
           </ul>
           <ul class="nav nav-sidebar bottomblock">
-            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe0f0;"></div>
+            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe0ec;"></div>
             <li class="nav user-info">You've used</li>
-            <div id="voice" class="nav inner-level chart"></div>
-            <li class="nav inner-level chart-bg">
+            <div id="voice-bar" class="nav inner-level chart"></div>
+            <li id="voice" class="nav inner-level chart-bg">
               <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-              <a href="" id="voice-detail">Voice <span class="unit"> minutes </span><span class="value">245</span></a></li>
-            <div id="messaging" class="nav inner-level chart"></div>
-            <li class="nav inner-level chart-bg">
+              <a id="voice-detail">Voice <span class="unit"></span><span class="value"></span></a></li>
+            <div id="messaging-bar" class="nav inner-level chart"></div>
+            <li id="messaging" class="nav inner-level chart-bg">
               <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-              <a href="" id="messaging-detail">Messaging <span class="unit">messages</span><span class="value">118</span></a></li>
-            <div id="data" class="nav inner-level chart"></div>
-            <li class="nav inner-level chart-bg">
+              <a id="messaging-detail">Messaging <span class="unit"></span><span class="value"></span></a></li>
+            <div id="data-bar" class="nav inner-level chart"></div>
+            <li id="data" class="nav inner-level chart-bg">
               <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-              <a href="" id="data-detail">Data <span class="unit">GB</span><span class="value">2.94</span></a></li>
+              <a id="data-detail">Data <span class="unit"></span><span class="value"></span></a></li>
             <div class="space"></div>
           </ul>
         </div>
+        <!--time-nav-top elements
+        ================================================== -->
         <div class="col-sm-9 col-md-9 navbar calendar main">
           <div class="col-sm-1 col-md-1 calendar-tab"></div>
           <div class="col-sm-2 col-md-2 calendar-tab">
             <div class="month">
-              <h4 class="important-1"><span id="previous-month">Sep 2014</span></h4>
-              <h6 class="important-1"><span id="previous-cycle">08/22/14 - 9/21/14</span></h6>
+              <h4 class="important-1"><span id="previous-month"></span></h4>
+              <h6 class="important-1"><span id="previous-cycle"></span></h6>
             </div>
           </div>
           <div class="col-sm-1 col-md-1 calendar-tab">
@@ -124,8 +127,8 @@
           </div>
           <div class="col-sm-3 col-md-3 calendar-tab">
             <div class="current month">
-              <h3 class="important-1"><span id="current-month">Current</span></h3>
-              <span id="current-cycle">09/22/14 - 10/21/14</span>
+              <h3 class="important-1"><span id="current-month"></span></h3>
+              <span id="current-cycle"></span>
             </div>
           </div>
           <div class="col-sm-1 col-md-1 calendar-tab">
@@ -133,145 +136,14 @@
           </div>
           <div class="col-sm-2 col-md-2 calendar-tab">
             <div class="month">
-            <h4 class="important-1"><span id="next-month">Not Available</h4>
+            <h4 class="important-1"><span id="next-month"></h4>
             <h6 class="important-1"><span id="next-cycle"></span></h6>
           </div>
           </div>
         </div>
-        <div class="col-sm-9 col-md-9 main" >
-          <div class="summary-section">
-            <h2 class="sub-header">Summary</h2>
-            <div class="col-md-4 placeholder-sec">Phone info summary</div>
-            <div class="col-md-7  col-md-offset-1 placeholder-sec">Billing info summary</div>
-            <div class="col-md-12 placeholder-sec" style="margin-top:20px;">Usage info summary</div>
-            <div class="table-responsive">
-            <!-- <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table> -->
-            </div>
-          </div>
+        <!--main content elements
+        ================================================== -->
+        <div class="col-sm-9 col-md-9 main content" >
         </div>
       </div>
     </div>
