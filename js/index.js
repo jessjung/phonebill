@@ -119,6 +119,7 @@ $(function() {
     if (navCounter >= datasize - 1) {
       navCounter = datasize - 1;
     }
+
     onchangeTimeNav(navCounter);
     onchangeDueNav(navCounter);
     viewContentDetail(selectedMenu, navCounter);
@@ -191,9 +192,9 @@ function onchangeDueNav(index) {
   // console.log(currentProperty.dueData);
   $("#due-date").text(currentProperty.dueData);
   $("#due-amount").text("$" + currentProperty.dueAmount);
-  if (currentProperty.isPaid) $("#due-alert").text("Already paid")
-  else $("#due-alert").text("5days remaining");
-
+  // if (currentProperty.isPaid) $("#due-alert").text("Already paid")
+  // else $("#due-alert").text("5days remaining");
+  visualizeDueTimer(index);
 }
 
 function onchangeTimeNav(index) {
@@ -243,7 +244,7 @@ function visualizeUsages(usageData) {
 
   var _html;
   var width = $(".chart-bg").width();
-  var height = $(".chart-bg").height();
+  var height = $(".chart-bg").height() + 2;
 
   height = height + "px";
 
@@ -265,6 +266,72 @@ function visualizeUsages(usageData) {
       '</span>';
     d3.select(detailsectionName).html(_html);
   });
+}
+
+/**
+    drawTodayRing
+  */
+
+function visualizeDueTimer(index) {
+
+  // console.log('ViewController::drawTodayRing');
+
+  // Update the wheel giving to it a value in degrees,
+  // getted from the percentage of the input value
+  // a.k.a. (value * 360) / 100
+  //current steps / goal steps *360;
+
+  var degrees;
+  var document = window.document,
+    ring = document.getElementsByTagName('path')[0],
+    text = document.getElementsByTagName('text')[1],
+    Math = window.Math,
+    toRadians = Math.PI / 180,
+    r = 45;
+
+  // Translate the center axis to a half of total size
+  ring.setAttribute('transform', 'translate(' + (r + 1) + ', ' + (r + 7) + ')');
+
+  // console.log('todaySteps', this.todaySteps, parseInt(this.todaySteps));
+  // console.log('goalSteps', this.goalSteps, parseInt(this.goalSteps));
+
+  var remainingDays = 11;
+  var fullMonth = 31;
+  currentProperty = userData.properties[index];
+
+  if (currentProperty.isPaid) {
+    degrees = 360;
+    $("#ring-negative").attr("fill", "#7f87a6");
+    $("#due-alert").attr("fill", "#fff");
+    $("#due-alert").attr("font-size", "22");
+    $("#due-alert").text("OK");
+    $("#due-alert-sub1").text("Already");
+    $("#due-alert-sub2").text("paid");
+  } else {
+    $("#ring-negative").attr("fill", "#2b2f3e");
+    $("#due-alert").attr("fill", "#7f87a6");
+    $("#due-alert").attr("font-size", "30");
+    $("#due-alert-sub1").text("days");
+    $("#due-alert-sub2").text("left");
+    $("#due-alert").text(remainingDays.toString());
+    degrees = ((fullMonth - remainingDays) * 360) / fullMonth;
+  }
+  // console.log("degrees: "+degrees);
+  // Convert the degrees value to radians
+  var rad = degrees * toRadians,
+    // Determine X and cut to 2 decimals
+    x = (Math.sin(rad) * r).toFixed(2),
+    // Determine Y and cut to 2 decimals
+    y = -(Math.cos(rad) * r).toFixed(2),
+    // The another half ring. Same as (deg > 180) ? 1 : 0
+    lenghty = window.Number(degrees > 180),
+    // Moveto + Arcto
+    descriptions = ['M', 0, 0, 'v', -r, 'A', r, r, 1, lenghty, 1, x, y, 'z'];
+  // Apply changes to the path
+  ring.setAttribute('fill', '#7f87a6');
+  ring.setAttribute('d', descriptions.join(' '));
+  // Update the numeric display
+
 }
 
 function clear() {
