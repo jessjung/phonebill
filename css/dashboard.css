@@ -6,6 +6,7 @@
 body {
   padding-top: 50px;
 }
+
 .close-icon{
   position: absolute;
   top: 15%;
@@ -62,6 +63,12 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
+}
+
+@media (min-width: 1358px) {
+  .container {
+    margin-top: 3%;
+  }
 }
 
 /*
@@ -154,7 +161,7 @@ body {
 }
 
 .container {
-  margin-top: 1%;
+  /* margin-top: 1%; */
 }
 
 .buttonblock{
