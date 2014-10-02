@@ -45,9 +45,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li><a onclick="dispalyAbout();return false;">About Jess</a></li>
+            <li><a href="https://github.com/jessjung/phonebill" target="_blank">UX solution</a></li>
+            <li><a href="https://github.com/jessjung/phonebill" target="_blank">Design mockup</a></li>
             <li><a href="https://github.com/jessjung/phonebill" target="_blank">Github Repo</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="http://jessjung.github.io" target="_blank">Go To Jess's Portfolio</a></li>
+            <li><a href="http://jessjung.github.io" target="_blank">Go to Jess' Portfolio</a></li>
           </ul>
 <!--           <form class="navbar-form navbar-right">
   <input type="text" class="form-control" placeholder="Search...">
@@ -169,6 +171,11 @@
         </div>
       </div>
     </div>
+    <div class="p-wrapper">
+      <div id="presentation-bg"></div>
+      <div id="close-icon" class="fs3 close-icon" aria-hidden="true" data-icon="&#x51;" onclick="clearPresentationMode();return false;"></div>
+      <div id="presentation-content"></div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -177,6 +184,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/d3.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/presentation.js"></script>
     <script src="src/assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../src/assets/js/ie10-viewport-bug-workaround.js"></script> -->

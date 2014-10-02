@@ -6,8 +6,47 @@
 body {
   padding-top: 50px;
 }
+.close-icon{
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  color: #fff;
+  z-index:4003;
+  cursor: pointer;
+  cursor: hand;
+}
+.p-wrapper{
+  display: none;
+}
+.dim
+{
+	height:100%;
+	width:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:4000;
+	background-color:black;
 
+  filter: alpha(opacity=75);
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
 
+.videodiv{
+  margin: auto;
+}
+
+.v-content{
+  height:60%;
+  width:50%;
+  position:absolute;
+  left:25%;
+  top:20%;
+  z-index:4001;
+  background-color:#fff;
+}
 /*
  * Global add-ons
  */
@@ -138,10 +177,12 @@ body {
   color:#fff;
   border: 1px solid #7f87a6;
   border-right: 0;
+  border-bottom: 0;
+
 }
 
-.topblock, .middleblock{
-  border-bottom: 0;
+.topblock{
+  border-top: 0;
 }
 
 .top, .middle, .bottom{
