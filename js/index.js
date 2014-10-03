@@ -169,8 +169,13 @@ $(function() {
 
 function viewContentDetail(sort, index) {
   // $(".content").append("<div>");
-  var t = sort.toUpperCase() + "-DETAIL | " + currentProperty.monthInitial.toUpperCase() +
+  var t;
+  if (sort == "summary") t = "OVERVIEW | ";
+  else t = sort.toUpperCase() + "-SUMMARY & DETAIL | ";
+
+  t += currentProperty.monthInitial.toUpperCase() +
     " 2014";
+
   $(".sub-header").text(t);
   $(".placeholder-sec").text("");
 
