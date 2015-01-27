@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/font.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
     <link href="src/less/styles.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -58,117 +59,121 @@
         </div>
       </div>
     </nav>
-    <div class="container">
-      <div class="row">
+    <div class="container fill">
+      <div id="app">
         <!--nav-sidebar elements
         ================================================== -->
-        <div class="col-sm-3 col-md-3 sidebar">
-          <ul class="nav nav-sidebar topblock">
-            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe010;"></div>
-              <li id = "summary" class="nav user-info">
-                <h4 class="important-2">Hello, Jess Jung!</h4>
-                <div class="space"></div>
-                Your new bill for October 2014
-                <br/>
-                is available now.
-                <br/>
-                 <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-                 <span class="home link">Go to the current bill</span>
-              </li>
-              <li id="phone" class="nav inner-level top">
-                <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-                  <a>(646) 717-2770</a>
-              </li>
-              <li id="plan" class="nav inner-level bottom">
-                <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-                <a>Simple choice plan</a>
-              </li>
-              <div class="space"></div>
-          </ul>
-          <ul class="nav nav-sidebar middleblock">
-            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe0ed;"></div>
-            <li class="nav billing-info"><!-- <h4 class="important-2"> -->You should pay<!-- </h4> --></li>
-            <li id="billing" class="nav inner-level bottom">
-              <a>
-              <div class="row">
-                <div class="col-sm-5">
-                  Total<h3 class="important-1"><span id="due-amount"></span></h3>
-                  Due by<h3 class="important-1"><span id="due-date"></span></h3>
-                </div>
-                <div id="due-chart" class="col-sm-5">
-                  <section class="timer-bar">
-                    <svg id="due-timer" width="100" height="100">
-                      <path id="ring" fill="#66FFCC"/>
-                      <circle id="ring-negative" cx="45" cy="51" r="33" fill="#2b2f3e"/>
-                      <circle cx="45" cy="51" r="40" fill="none" stroke="#7f87a6" stroke-width="3" opacity=".5"/>
-                      <text id="due-alert" x="45" y="36" text-anchor="middle" dominant-baseline="central" fill="#7f87a6 " font-size="30" font-weight="bold">11</text>
-                      <text id="due-alert-sub1" x="45" y="57" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="12" font-weight="light">days</text>
-                      <text id="due-alert-sub2" x="45" y="70" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="12" font-weight="light">left</text>
-                    </svg>
-                  </section>
-                </div>
-                <div class="col-sm-2">
-                  <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-                </div>
-
-
+        <div class="sidebar">
+          <div id="brand-nav" class="centeralign">
+            <div id="brand-icon" class="icon"></div>
+          </div>
+          <div id="user-nav" class="info-nav">
+            <div class="nav-title">
+              <div id="user-icon" class="icon-small"></div>
+              <span class="nav-text">Hello, Jess!</span>
             </div>
-            </a>
-            </li>
-            <div class="space"></div>
-            <li class="buttonblock">PAY NOW</li>
-          </ul>
-          <ul class="nav nav-sidebar bottomblock">
-            <div class="section-icon fs2" aria-hidden="true" data-icon="&#xe0ec;"></div>
-            <li class="nav user-info" >You've used</li>
-            <div id="voice-bar" class="nav inner-level chart"></div>
-            <li id="voice" class="nav inner-level chart-bg top">
-              <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-              <a id="voice-detail">Voice <span class="unit"></span><span class="value"></span></a>
-            </li>
-            <div id="messaging-bar" class="nav inner-level chart"></div>
-            <li id="messaging" class="nav inner-level chart-bg middle">
-              <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-              <a id="messaging-detail">Messaging <span class="unit"></span><span class="value"></span></a></li>
-            <div id="data-bar" class="nav inner-level chart"></div>
-            <li id="data" class="nav inner-level chart-bg bottom">
-              <div class="fs2 menu-icon" aria-hidden="true" data-icon="&#x35;"></div>
-              <a id="data-detail">Data <span class="unit"></span><span class="value"></span></a></li>
-            <div class="space"></div>
-          </ul>
+            <div class="nav-content">
+              <ul class="nav nav-sidebar">
+                <li id="phone" class="nav inner-level top inset-shadow">
+                    <a>(646) 717-2770</a>
+                </li>
+                <li id="plan" class="nav inner-level bottom inset-shadow">
+                  <a>Simple choice plan</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="billing-nav" class="info-nav wrapper">
+            <div class="nav-title">
+              <div id="billing-icon" class="icon-small"></div>
+              <span class="nav-text">You should pay</span>
+            </div>
+            <div class="nav-content">
+              <ul class="nav nav-sidebar">
+                <li id="billing" class="nav inner-level bottom inset-shadow">
+                  <a>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      Total<h3 class="important-1"><span id="due-amount"></span></h3>
+                      Due by<h3 class="important-1"><span id="due-date"></span></h3>
+                    </div>
+                    <div id="due-chart" class="col-sm-5">
+                      <section class="timer-bar">
+                        <svg id="due-timer" width="100" height="100">
+                          <path id="ring" fill="#66FFCC"/>
+                          <circle id="ring-negative" cx="45" cy="51" r="33" fill="#2b2f3e"/>
+                          <circle cx="45" cy="51" r="40" fill="none" stroke="#7f87a6" stroke-width="3" opacity=".5"/>
+                          <text id="due-alert" x="45" y="36" text-anchor="middle" dominant-baseline="central" fill="#7f87a6 " font-size="30" font-weight="bold">11</text>
+                          <text id="due-alert-sub1" x="45" y="57" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="12" font-weight="light">days</text>
+                          <text id="due-alert-sub2" x="45" y="70" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="12" font-weight="light">left</text>
+                        </svg>
+                      </section>
+                    </div>
+                </div>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="pay-nav" class="buttonblock">
+            <h4>PAY NOW</h4>
+          </div>
+          <div id="usage-nav" class="wrapper">
+            <div class="nav-title">
+              <div id="usage-icon" class="icon-small"></div>
+              <span class="nav-text">You've used</span>
+            </div>
+            <div class="nav-content">
+              <ul class="nav nav-sidebar">
+                <div id="voice-bar" class="nav inner-level chart"></div>
+                <li id="voice" class="nav inner-level chart-bg top inset-shadow">
+                  <a id="voice-detail">Voice <span class="unit"></span><span class="value"></span></a>
+                </li>
+                <div id="messaging-bar" class="nav inner-level chart"></div>
+                <li id="messaging" class="nav inner-level chart-bg middle inset-shadow">
+                  <a id="messaging-detail">Messaging <span class="unit"></span><span class="value"></span></a></li>
+                <div id="data-bar" class="nav inner-level chart"></div>
+                <li id="data" class="nav inner-level chart-bg bottom inset-shadow">
+                  <a id="data-detail">Data <span class="unit"></span><span class="value"></span></a></li>
+                <div class="space"></div>
+              </ul>
+            </div>
+          </div>
         </div>
         <!--time-nav-top elements
         ================================================== -->
-        <div class="col-sm-9 col-md-9 navbar calendar main">
-          <div class="col-sm-1 col-md-1 calendar-tab"></div>
-          <div class="col-sm-2 col-md-2 calendar-tab">
+        <div class="content-area">
+        <div class="top-nav wrapper">
+          <div class="calendar-tab">
             <div class="month">
               <h4 class="important-1"><span id="previous-month"></span></h4>
-              <h6 class="important-1"><span id="previous-cycle"></span></h6>
+              <h6 class="important-1"><span id="previous-cycle" class="date-object"></span></h6>
             </div>
           </div>
-          <div class="col-sm-1 col-md-1 calendar-tab">
+          <div class="calendar-icon">
             <div id="previous" class="fs3 arrow-icon" aria-hidden="true" data-icon="&#x3c;"></div>
           </div>
-          <div class="col-sm-3 col-md-3 calendar-tab">
+          <div class="calendar-tab">
             <div class="current month">
-              <h3 class="important-1"><span id="current-month"></span></h3>
-              <span id="current-cycle"></span>
+              <h4 class="important-1"><span id="current-month"></span></h4>
+              <span id="current-cycle" class="date-object"></span>
             </div>
           </div>
-          <div class="col-sm-1 col-md-1 calendar-tab">
+          <div class="calendar-icon">
             <div id="next" class="fs3 arrow-icon" aria-hidden="true" data-icon="&#x3d;"></div>
           </div>
-          <div class="col-sm-2 col-md-2 calendar-tab">
+          <div class="calendar-tab">
             <div class="month">
             <h4 class="important-1"><span id="next-month"></h4>
-            <h6 class="important-1"><span id="next-cycle"></span></h6>
+            <h6 class="important-1"><span id="next-cycle" class="date-object"></span></h6>
           </div>
           </div>
         </div>
         <!--main content elements
         ================================================== -->
-        <div class="col-sm-9 col-md-9 main content" >
+        <div class="main">
+          <div class="content"></div>
+        </div>
         </div>
       </div>
     </div>

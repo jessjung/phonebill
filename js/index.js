@@ -184,7 +184,7 @@ function viewContentDetail(sort, index) {
 function initContentMain() {
   clear();
   $(".content").html(
-    '<div class="summary-section"><h3 class="sub-header"></h3><div class="col-md-4 placeholder-sec">Phone info summary</div><div class="col-md-7  col-md-offset-1 placeholder-sec">Billing info summary</div><div class="col-md-12 placeholder-sec" style="margin-top:55px;">Usage info summary</div></div></div>'
+    '<div class="summary-section"><h3 class="sub-header"></h3><img src="./img/dummy.jpg" /></div>'
   );
 
 }
@@ -216,7 +216,7 @@ function onchangeTimeNav(index) {
     previousMonthInitial = previousProperty.monthInitial;
     previousCycle = previousProperty.cycle;
   } else {
-    previousMonthInitial = "Not available";
+    previousMonthInitial = "Not Posted";
     previousCycle = "";
   }
   if (index - 1 >= 0) {
@@ -224,7 +224,7 @@ function onchangeTimeNav(index) {
     nextMonthInitial = nextProperty.monthInitial;
     nextCycle = nextProperty.cycle;
   } else {
-    nextMonthInitial = "Not available";
+    nextMonthInitial = "Coming Soon";
     nextCycle = "";
   }
 
@@ -249,7 +249,7 @@ function visualizeUsages(usageData) {
 
   var _html;
   var width = $(".chart-bg").width();
-  var height = $(".chart-bg").height() + 2;
+  var height = $(".chart-bg").height();
 
   height = height + "px";
 
